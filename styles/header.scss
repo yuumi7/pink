@@ -1,5 +1,11 @@
 @use "./imports.scss" as *;
-
+.header {
+  @include above($desktop-width) {
+    margin-bottom: -110px;
+    z-index: 100;
+    position: relative;
+  }
+}
 .nav {
   &__list {
     font-size: 18px;
@@ -11,7 +17,6 @@
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     @include above($desktop-width) {
-      //  background-color: transparent;
       background-color: rgba(0, 0, 0, 0.3);
       border: none;
       display: flex;
