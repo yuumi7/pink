@@ -45,7 +45,7 @@
       </nav>
     </header>
     <main>
-      <div class="install__container">
+      <section class="install__container">
         <div class="install">
           <p class="install__title">Взгляните на жизнь иначе!</p>
           <div class="install__blue--tablet">
@@ -113,14 +113,14 @@
             Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
           </p>
         </div>
-      </div>
+      </section>
 
-      <div class="intro">
+      <section class="intro">
         <p class="intro__title">Устали от серости мегаполиса?</p>
         <p class="intro__title">Нам есть, что вам предложить!</p>
-      </div>
+      </section>
 
-      <div class="features">
+      <section class="features">
         <div class="features__container">
           <h2 class="features__title">Поднимает настроение</h2>
           <p class="features__description">
@@ -159,8 +159,9 @@
           src="img/phone3desk.png"
           alt=""
         />
-      </div>
-      <div class="research">
+      </section>
+
+      <section class="research">
         <img class="research__clock--tablet" src="img/clock.svg" alt="" />
         <img class="research__clock--desktop" src="img/clockdesk.svg" alt="" />
         <div class="research__container">
@@ -175,8 +176,9 @@
             >Узнать больше об исследовании</a
           >
         </div>
-      </div>
-      <div class="review">
+      </section>
+
+      <section class="review">
         <div class="review__container">
           <div class="review__title-wrapper">
             <h2 class="review__title">Николай Петров</h2>
@@ -198,22 +200,94 @@
         </ol>
         <button class="review__button review__button--prev"></button>
         <button class="review__button review__button--next"></button>
-      </div>
+      </section>
 
-      <ul>
-        <li>Розовый фильтр</li>
-        <li>Смайлики</li>
-        <li>Комментарии</li>
-      </ul>
+      <section class="table__block">
+        <div class="table__container">
+          <table class="table table--mobile">
+            <tr class="">
+              <th class="table__name">
+                <span class="table__title">База</span>
+                <span class="table__price">1,99 USD</span>
+              </th>
+              <th class="table__name table__name--hit">
+                <span class="table__title">Стандарт</span>
+                <span class="table__price">3,99 USD</span>
+              </th>
+              <th class="table__name">
+                <span class="table__title">Анлим</span>
+                <span class="table__price">9,99 USD</span>
+              </th>
+            </tr>
+            <tr class="table__row">
+              <td class="table__item table__item--included">Розовый фильтр</td>
+              <td class="table__item table__item--included">Розовый фильтр</td>
+              <td class="table__item table__item--included">Розовый фильтр</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__item table__item--not-included">Смайлики</td>
+              <td class="table__item table__item--included">Смайлики</td>
+              <td class="table__item table__item--included">Смайлики</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__item table__item--not-included">Комментарии</td>
+              <td class="table__item table__item--not-included">Комментарии</td>
+              <td class="table__item table__item--included">Комментарии</td>
+            </tr>
+          </table>
+          <table class="table table--tablet">
+            <tr class="table__row">
+              <th class="table__empty"></th>
+              <th class="table__name">
+                <span class="table__title">База</span>
+                <span class="table__price">1,99 USD</span>
+              </th>
+              <th class="table__name table__name--hit">
+                <span class="table__title">Стандарт</span>
+                <span class="table__price">3,99 USD</span>
+              </th>
+              <th class="table__name">
+                <span class="table__title">Анлим</span>
+                <span class="table__price">9,99 USD</span>
+              </th>
+            </tr>
+            <tr class="table__row">
+              <td class="table__item">Розовый фильтр</td>
+              <td class="table__item table__item--included"></td>
+              <td class="table__item table__item--included"></td>
+              <td class="table__item table__item--included"></td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__item">Смайлики</td>
+              <td class="table__item table__item--not-included"></td>
+              <td class="table__item table__item--included"></td>
+              <td class="table__item table__item--included"></td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__item">Комментарии</td>
+              <td class="table__item table__item--not-included"></td>
+              <td class="table__item table__item--not-included"></td>
+              <td class="table__item table__item--included"></td>
+            </tr>
+          </table>
+        </div>
+        <ol class="table-pagination">
+          <li>
+            <button class="table-pagination__item"></button>
+          </li>
+          <li><button class="table-pagination__item--current"></button></li>
+          <li><button class="table-pagination__item"></button></li>
+        </ol>
+      </section>
     </main>
     <footer>
       <p>Остались вопросы? Свяжитесь с нами!</p>
-      <span>Звоните:</span>
-      <span>+7 (812) 555-66-66</span>
-      <span>Пишите:</span>
-      <span>mail@htmlacademy.ru</span>
-      <span>Приезжайте в гости:</span>
-      <span>ул. Большая Конюшенная, 19/8</span>
+      <span class="footer__title">Звоните:</span>
+      <span class="footer__description">+7 (812) 555-66-66</span>
+      <span class="footer__title">Пишите:</span>
+      <span class="footer__description">mail@htmlacademy.ru</span>
+      <span class="footer__title">Приезжайте в гости:</span>
+      <span class="footer__description">ул. Большая Конюшенная, 19/8</span>
     </footer>
   </body>
 </html>
