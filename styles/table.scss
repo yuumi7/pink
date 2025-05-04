@@ -1,0 +1,167 @@
+@use "./imports.scss" as *;
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #e5e5e5;
+  table-layout: fixed;
+
+  @include above($tablet-width) {
+    border: none;
+  }
+
+  &--mobile {
+    @include above($tablet-width) {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+    @include above($tablet-width) {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 97px;
+    }
+  }
+
+  &__block {
+    background-image: url("/img/grey-bg.png");
+    background-position: top center;
+    background-size: 1300px 600px;
+    background-repeat: no-repeat;
+    padding-top: 143px;
+    @include above($tablet-width) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @include above($desktop-width) {
+      background-size: 2400px 534px;
+    }
+  }
+
+  &__container {
+    max-width: 100%;
+    overflow-x: auto;
+    padding-bottom: 20px;
+  }
+
+  &__name {
+    width: 276px;
+    position: relative;
+    line-height: 30px;
+    color: #ffff;
+    background-color: #283645;
+    border: 2px solid #e5e5e5;
+    padding: 20px 30px;
+
+    &--hit {
+      &::after {
+        content: "";
+        width: 74px;
+        height: 74px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url("/img/icons/hit.svg");
+        background-size: cover;
+      }
+    }
+
+    @include above($tablet-width) {
+      padding: 10px 20px;
+
+      &--hit {
+        &::after {
+          width: 61px;
+          height: 61px;
+        }
+      }
+    }
+
+    @include above($desktop-width) {
+      padding: 25px;
+      &--hit {
+        &::after {
+          width: 74px;
+          height: 74px;
+        }
+      }
+    }
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+  }
+
+  &__price {
+    display: block;
+    font-size: 18px;
+    font-weight: 200;
+    @include above($desktop-width) {
+      font-size: 24px;
+    }
+  }
+
+  &__item {
+    width: 276px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #283645;
+    border: 2px solid #e5e5e5;
+    padding: 20px 25px;
+    background-repeat: no-repeat;
+    padding-right: 60px;
+    padding-left: 20px;
+    background-position: center right 17px;
+    background-color: #ffff;
+    @include above($tablet-width) {
+      text-transform: none;
+      background-position: center;
+      padding: 19px;
+    }
+    @include above($tablet-width) {
+      font-size: 18px;
+    }
+
+    &--included {
+      background-image: url("/img/icons/yes.svg");
+    }
+
+    &--not-included {
+      background-image: url("/img/icons/no.svg");
+    }
+  }
+}
+
+.table-pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 33px;
+  &__item {
+    padding: 0;
+    border: none;
+    width: 6px;
+    height: 6px;
+    background-color: #283645;
+    opacity: 30%;
+    border-radius: 50%;
+    &--current {
+      width: 12px;
+      height: 12px;
+      padding: 0;
+      border-radius: 50%;
+      border: 3px solid #283645;
+    }
+  }
+  @include above($tablet-width) {
+    display: none;
+  }
+}

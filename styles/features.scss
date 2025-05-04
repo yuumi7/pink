@@ -1,0 +1,173 @@
+@use "./imports.scss" as *;
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 46px;
+  margin-bottom: 39px;
+  @include above($tablet-width) {
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  @include above($desktop-width) {
+    align-items: center;
+    margin-bottom: 70px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 24px;
+    line-height: 120%;
+    color: #283645;
+    font-weight: 200;
+
+    @include above($tablet-width) {
+      font-size: 40px;
+    }
+    @include above($desktop-width) {
+      text-align: center;
+      font-size: 50px;
+      margin-top: 0;
+      &:last-child {
+        max-width: 700px;
+      }
+    }
+  }
+}
+
+.features {
+  position: relative;
+  background-image: url("/img/grey-bg.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: auto 900px;
+  padding-bottom: 280px;
+  padding-top: 130px;
+  overflow: hidden;
+
+  @include above($tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 43px;
+    background-size: 1200px 530px;
+    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-left: 330px;
+  }
+  @include above($desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-size: 100% 715px;
+    gap: 68px;
+    padding: 59px 154px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include above($tablet-width) {
+      align-items: flex-start;
+    }
+    @include above($desktop-width) {
+      align-items: center;
+      gap: 20px;
+      padding-top: 301px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    @include above($tablet-width) {
+      text-align: start;
+      margin-top: 0;
+    }
+    @include above($desktop-width) {
+      width: 234px;
+      text-align: center;
+      font-size: 30px;
+      line-height: 30px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__description {
+    max-width: 280px;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 43px;
+    text-align: center;
+    @include above($tablet-width) {
+      max-width: 310px;
+      text-align: start;
+      padding: 0;
+      margin: 0;
+    }
+    @include above($desktop-width) {
+      max-width: 252px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &__phone {
+    width: 157px;
+    height: 320px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @include above($tablet-width) {
+      display: none;
+    }
+  }
+
+  &__phone-tablet {
+    display: none;
+    @include above($tablet-width) {
+      width: 268px;
+      height: 547px;
+      display: block;
+      position: absolute;
+      left: 20px;
+      top: 30px;
+    }
+    @include above($desktop-width) {
+      display: none;
+    }
+  }
+
+  &__phonedesk {
+    display: none;
+    @include above($desktop-width) {
+      width: 300px;
+      height: 310px;
+      display: block;
+      position: absolute;
+      transform: translateX(-50%);
+      bottom: 50%;
+    }
+
+    &--first {
+      left: 22%;
+    }
+
+    &--second {
+      left: 50%;
+    }
+
+    &--third {
+      left: 78%;
+    }
+  }
+}

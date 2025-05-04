@@ -1,0 +1,106 @@
+@use "./imports.scss" as *;
+.install {
+  min-height: 396px;
+  background-image: url("/img/back-mobile.png");
+  background-position: center top -65px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 29px;
+  position: relative;
+  @include above($tablet-width) {
+    min-height: 619px;
+    background-image: url("/img/back-desktop.png");
+  }
+  @include above($desktop-width) {
+    min-height: 853px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 120%;
+    color: #ffffff;
+    font-weight: 300;
+    padding: 0 20px;
+    text-align: center;
+    @include above($tablet-width) {
+      width: 300px;
+      font-size: 40px;
+      line-height: 120%;
+      padding-left: 40px;
+      margin-top: 80px;
+    }
+    @include above($desktop-width) {
+      width: 400px;
+      font-size: 50px;
+      padding-left: 150px;
+      margin-top: 174px;
+    }
+  }
+
+  &__platforms {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 28px;
+    padding-left: 38px;
+  }
+
+  &__description {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: center;
+    @include above($tablet-width) {
+      width: 300px;
+      font-size: 18px;
+    }
+  }
+
+  &__blue {
+    &--mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #1d2631;
+      padding-top: 28px;
+      padding-bottom: 38px;
+      @include above($tablet-width) {
+        display: none;
+      }
+    }
+
+    &--tablet {
+      display: none;
+      @include above($tablet-width) {
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+        margin-top: 39px;
+      }
+      @include above($desktop-width) {
+        padding-left: 130px;
+      }
+    }
+  }
+
+  &__button {
+    width: 280px;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 100%;
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 16px 38px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    margin-bottom: 32px;
+    @include above($tablet-width) {
+      padding: 21px 44px;
+      margin-top: 0;
+    }
+  }
+}
