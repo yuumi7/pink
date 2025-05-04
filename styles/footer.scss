@@ -1,1 +1,148 @@
 @use "./imports.scss" as *;
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 13px;
+
+  &__wrapper {
+    display: grid;
+    gap: 35px;
+    padding: 50px 40px 22px 40px;
+    @include above($tablet-width) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include above($desktop-width) {
+      display: flex;
+      justify-content: center;
+      gap: 94px;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    &:last-child {
+      grid-column: 1/-1;
+    }
+  }
+
+  &__name {
+    font-size: 24px;
+    line-height: 120%;
+    color: #283645;
+    margin-top: 40px;
+
+    @include above($tablet-width) {
+      max-width: 370px;
+      font-size: 40px;
+      font-weight: 200;
+    }
+    @include above($desktop-width) {
+      max-width: 462px;
+      font-size: 50px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__description {
+    font-size: 24px;
+    color: #d22856;
+  }
+
+  &__map {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    @include above($tablet-width) {
+      height: 374px;
+    }
+    @include above($tablet-width) {
+      height: 502px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: -90px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 600px solid transparent;
+      border-right: 600px solid transparent;
+      border-top: 123px solid white;
+    }
+    @include above($tablet-width) {
+      &::after {
+        top: -45px;
+      }
+    }
+    @include above($tablet-width) {
+      &::after {
+        top: -20px;
+        border-left: 720px solid transparent;
+        border-right: 720px solid transparent;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+    padding: 40px 74px 50px 74px;
+    @include above($tablet-width) {
+      flex-direction: row;
+      gap: 80px;
+    }
+    @include above($desktop-width) {
+      gap: 234px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  &__copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 14px;
+    line-height: 18px;
+    @include above($desktop-width) {
+      font-size: 18px;
+    }
+  }
+
+  &__logo {
+    display: block;
+    @include above($tablet-width) {
+      display: none;
+    }
+    &--desktop {
+      display: none;
+      @include above($tablet-width) {
+        display: block;
+      }
+    }
+  }
+
+  &__html {
+    width: 27px;
+    height: 34px;
+  }
+}
