@@ -130,12 +130,12 @@
 
   &__logo {
     display: block;
-    @include above($tablet-width) {
+    @include above($desktop-width) {
       display: none;
     }
     &--desktop {
       display: none;
-      @include above($tablet-width) {
+      @include above($desktop-width) {
         display: block;
       }
     }

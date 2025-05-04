@@ -11,7 +11,8 @@ ol {
 
 p,
 a,
-li {
+li,
+h2 {
   margin: 0;
 }
 
@@ -21,6 +22,7 @@ a {
 }
 
 body {
+  max-width: 1980px;
   font-family: "Open Sans", sans-serif;
   padding: 0;
   margin: 0;
