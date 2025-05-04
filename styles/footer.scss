@@ -9,7 +9,7 @@
   &__wrapper {
     display: grid;
     gap: 35px;
-    padding: 50px 40px 22px 40px;
+    padding: 50px 34px 22px 34px;
     @include above($tablet-width) {
       grid-template-columns: 1fr 1fr;
     }
@@ -102,6 +102,7 @@
     gap: 41px;
     padding: 40px 74px 50px 74px;
     @include above($tablet-width) {
+      padding: 38px 20px;
       flex-direction: row;
       gap: 80px;
     }

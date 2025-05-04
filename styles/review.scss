@@ -92,6 +92,7 @@
   }
 
   @include above($desktop-width) {
+    justify-content: center;
     padding: 19px 130px 65px 130px;
     background-color: #f2f2f2;
   }

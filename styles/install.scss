@@ -94,11 +94,12 @@
     line-height: 100%;
     font-weight: 700;
     border-radius: 30px;
-    padding: 38px;
+    padding: 16px 38px;
     background-color: transparent;
     border: 2px solid #ffffff;
     margin-bottom: 32px;
     @include above($tablet-width) {
+      padding: 21px 44px;
       margin-top: 0;
     }
   }
